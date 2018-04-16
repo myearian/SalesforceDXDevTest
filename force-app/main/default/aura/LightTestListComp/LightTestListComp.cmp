@@ -1,0 +1,7 @@
+<aura:component description="LightTestListComp" controller="LightTestController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="test" type="String"/>
+    <div>
+        {!v.test}test
+    </div>
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:component description="LightTestComp" implements="force:appHostable">
+    <c:LightTestListComp />
+</aura:component>
