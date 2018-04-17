@@ -2,6 +2,8 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute name="test" type="String"/>
     <div>
-        {!v.test}test
+        <aura:iteration items="{!v.test}" var="policies" >
+            <li><a>{!policies.policyNumber}</a></li>
+        </aura:iteration>
     </div>
 </aura:component>
