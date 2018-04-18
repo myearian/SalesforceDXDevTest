@@ -32,7 +32,7 @@
             </div>
             <div class="slds-grid slds-gutters slds-wrap">
                 <aura:iteration items="{!v.test}" var="policy">
-                    <div class="slds-card__body slds-card__body_inner slds-filters__item:hover">
+                    <div class="slds-card__body slds-card__body_inner">
                         <article class="slds-card slds-card_boundary">
                             <div class="slds-card__header slds-grid">
                                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
