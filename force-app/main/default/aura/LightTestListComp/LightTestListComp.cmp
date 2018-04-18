@@ -2,8 +2,64 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute name="test" type="String"/>
     <div>
-        <aura:iteration items="{!v.test}" var="policies" >
-            <li><a>{!policies.policyNumber}</a></li>
-        </aura:iteration>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2>
+                            <div class="slds-card__header-link slds-truncate" title="Customer">
+                                <span class="slds-text-heading--medium">Matt I Zombie</span>
+                                <dl class="slds-list_inline slds-p-left--xx-large slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_inverse-weak slds-truncate" title="dob">Date of Birth:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="dobValue">10/30/1966</dd>
+                                    <dt class="slds-item_label slds-text-color_inverse-weak slds-truncate"
+                                        title="address">Address:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="dobValue">10 Mulholland Dr.</dd>
+                                    <dt class="slds-item_label slds-text-color_inverse-weak slds-truncate"
+                                        title="city">City:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="dobValue">Los Angeles</dd>
+                                    <dt class="slds-item_label slds-text-color_inverse-weak slds-truncate"
+                                        title="state">State:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="dobValue">CA</dd>
+                                    <dt class="slds-item_label slds-text-color_inverse-weak slds-truncate"
+                                        title="zip">Zipcode:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="dobValue">90077</dd>
+                                </dl>
+                            </div>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-grid slds-gutters slds-wrap">
+                <aura:iteration items="{!v.test}" var="policy">
+                    <div class="slds-card__body slds-card__body_inner slds-filters__item:hover">
+                        <article class="slds-card slds-card_boundary">
+                            <div class="slds-card__header slds-grid">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2>
+                                            <div class="slds-card__header-link slds-truncate"
+                                                 title="card">
+                                                <span class="slds-text-heading_small">Policy: {!policy.policyNumber}</span>
+                                            </div>
+                                        </h2>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner">
+                                <dl class="slds-dl_horizontal">
+                                    <dt class="slds-dl_horizontal__label">Policy Type:</dt>
+                                    <dd class="slds-dl_horizontal__detail">{!policy.policyType}</dd>
+                                    <dt class="slds-dl_horizontal__label">Product Code:</dt>
+                                    <dd class="slds-dl_horizontal__detail">{!policy.productCode}</dd>
+                                    <dt class="slds-dl_horizontal__label">Policy Status:</dt>
+                                    <dd class="slds-dl_horizontal__detail">{!policy.policyStatus}</dd>
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
+                </aura:iteration>
+            </div>
+        </article>
     </div>
 </aura:component>
