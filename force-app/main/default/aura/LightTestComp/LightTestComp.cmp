@@ -1,5 +1,7 @@
 <aura:component description="LightTestComp" implements="force:appHostable">
     <c:LightTestListComp/>
     <br />
+    <c:XMLHttpRequest/>
+    <br />
     <c:LightTestMapComp/>
 </aura:component>
