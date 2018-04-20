@@ -5,5 +5,9 @@
 
 .THIS .map {
     position: inherit;
-    height: 75%;
+    height: 65%;
+}
+
+.THIS .slds-cell-edit {
+    
 }
